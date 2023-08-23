@@ -1,0 +1,53 @@
+{
+  "name": "flyjet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.5",
+    "@mui/x-date-pickers": "^6.11.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "bootstrap": "^4.6.2",
+    "btlnk-short-url": "^1.0.3",
+    "formik": "^2.4.2",
+    "i18next": "^23.4.1",
+    "moment": "^2.29.4",
+    "next": "13.4.12",
+    "next-i18next": "^14.0.0",
+    "next-redux-wrapper": "^8.1.0",
+    "qrcode.react": "^3.1.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-cookie": "^5.0.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2",
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.2",
+    "react-select": "^5.7.4",
+    "react-toastify": "^9.1.3",
+    "redux": "^4.2.1",
+    "sass": "^1.64.1",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.2.17",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/react-datepicker": "^4.15.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "typescript": "^5.1.6"
+  }
+}

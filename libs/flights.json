@@ -1,0 +1,232 @@
+[
+  {
+    "flightNumber": "XYZ123",
+    "from": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "seat": "15A",
+    "class": "Economy",
+    "terminal": "T2",
+    "gate": "B12",
+    "boardingTime": "08:00",
+    "departureTime": "09:00",
+    "duration": "7 hours",
+    "arrivalTime": "04:00",
+    "date": "08-24-2023",
+    "baggage": "20kg"
+  },
+  {
+    "flightNumber": "ABC456",
+    "from": {
+      "airportCode": "LAX",
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "CDG",
+      "city": "Paris",
+      "country": "France"
+    },
+    "seat": "21B",
+    "class": "Business",
+    "terminal": "T4",
+    "gate": "C7",
+    "boardingTime": "10:30",
+    "departureTime": "11:30",
+    "duration": "10 hours",
+    "arrivalTime": "06:30",
+    "date": "08-25-2023",
+    "baggage": "30kg"
+  },
+  {
+    "flightNumber": "DEF789",
+    "from": {
+      "airportCode": "HND",
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "to": {
+      "airportCode": "SYD",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "seat": "8C",
+    "class": "Economy",
+    "terminal": "T3",
+    "gate": "A15",
+    "boardingTime": "14:45",
+    "departureTime": "15:30",
+    "duration": "9 hours",
+    "arrivalTime": "22:30",
+    "date": "08-26-2023",
+    "baggage": "25kg"
+  },
+  {
+    "flightNumber": "GHI123",
+    "from": {
+      "airportCode": "ORD",
+      "city": "Chicago",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "AMS",
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    },
+    "seat": "12D",
+    "class": "Economy",
+    "terminal": "T1",
+    "gate": "D5",
+    "boardingTime": "18:15",
+    "departureTime": "19:00",
+    "duration": "8 hours",
+    "arrivalTime": "04:00",
+    "date": "08-27-2023",
+    "baggage": "23kg"
+  },
+  {
+    "flightNumber": "JKL456",
+    "from": {
+      "airportCode": "MIA",
+      "city": "Miami",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "BCN",
+      "city": "Barcelona",
+      "country": "Spain"
+    },
+    "seat": "5A",
+    "class": "First",
+    "terminal": "T2",
+    "gate": "A9",
+    "boardingTime": "22:30",
+    "departureTime": "23:15",
+    "duration": "9 hours",
+    "arrivalTime": "08:15",
+    "date": "08-28-2023",
+    "baggage": "15kg"
+  },
+  {
+    "flightNumber": "MNO789",
+    "from": {
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "PEK",
+      "city": "Beijing",
+      "country": "China"
+    },
+    "seat": "18E",
+    "class": "Business",
+    "terminal": "T5",
+    "gate": "E3",
+    "boardingTime": "07:45",
+    "departureTime": "08:30",
+    "duration": "12 hours",
+    "arrivalTime": "21:30",
+    "date": "08-29-2023",
+    "baggage": "32kg"
+  },
+  {
+    "flightNumber": "PQR123",
+    "from": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "to": {
+      "airportCode": "DXB",
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    "seat": "10F",
+    "class": "Economy",
+    "terminal": "T3",
+    "gate": "C10",
+    "boardingTime": "12:00",
+    "departureTime": "13:00",
+    "duration": "7 hours",
+    "arrivalTime": "21:00",
+    "date": "08-30-2023",
+    "baggage": "28kg"
+  },
+  {
+    "flightNumber": "STU456",
+    "from": {
+      "airportCode": "CDG",
+      "city": "Paris",
+      "country": "France"
+    },
+    "to": {
+      "airportCode": "ICN",
+      "city": "Seoul",
+      "country": "South Korea"
+    },
+    "seat": "15C",
+    "class": "Economy",
+    "terminal": "T2",
+    "gate": "B8",
+    "boardingTime": "15:30",
+    "departureTime": "16:15",
+    "duration": "11 hours",
+    "arrivalTime": "10:15",
+    "date": "08-31-2023",
+    "baggage": "22kg"
+  },
+  {
+    "flightNumber": "VWX789",
+    "from": {
+      "airportCode": "SIN",
+      "city": "Singapore",
+      "country": "Singapore"
+    },
+    "to": {
+      "airportCode": "SYD",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "seat": "20B",
+    "class": "Business",
+    "terminal": "T4",
+    "gate": "A12",
+    "boardingTime": "09:15",
+    "departureTime": "10:00",
+    "duration": "8 hours",
+    "arrivalTime": "18:00",
+    "date": "09-01-2023",
+    "baggage": "30kg"
+  },
+  {
+    "flightNumber": "YZA123",
+    "from": {
+      "airportCode": "HKG",
+      "city": "Hong Kong",
+      "country": "Hong Kong"
+    },
+    "to": {
+      "airportCode": "LAX",
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "seat": "7D",
+    "class": "First",
+    "terminal": "T1",
+    "gate": "D9",
+    "boardingTime": "19:45",
+    "departureTime": "20:30",
+    "duration": "12 hours",
+    "arrivalTime": "16:30",
+    "date": "09-02-2023",
+    "baggage": "35kg"
+  }
+]

@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 70%;
+  border-radius: 8px;
+  margin: -10rem auto;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+.formInputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.guests {
+  width: 70%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 45px;
+  flex-wrap: wrap;
+  label {
+    margin: 0;
+    font-weight: 500;
+    font-size: 22px;
+  }
+}
+.counter {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  align-items: center;
+  span {
+    font-size: 25px;
+  }
+}
+.incrementers {
+  background: #fff;
+  color: #44a4f3;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer !important;
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+.searchBtn {
+  width: 30%;
+  background: #44a4f3;
+  &:hover {
+    background-color: orange;
+  }
+}

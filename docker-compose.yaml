@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  app:
+    container_name: platform
+    image: platform
+    ports:
+      - "3003:3000"
+    volumes:
+      -  ##
+    build:
+      context: .
+    restart: on-failure
