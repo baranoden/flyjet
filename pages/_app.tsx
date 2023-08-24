@@ -6,6 +6,8 @@ import { appWithTranslation } from "next-i18next";
 import StatusRender from "presentations/components/statusRender";
 import { Provider } from "react-redux";
 import { reduxWrapper } from "store";
+import { ToastContainer } from "react-toastify";
+
 import Head from "next/head";
 function MyApp({ Component, ...rest }) {
   const { props, store } = reduxWrapper.useWrappedStore(rest);
@@ -31,6 +33,7 @@ function MyApp({ Component, ...rest }) {
       </Head>
       <Provider store={store}>
         <StatusRender render={<Component {...props.pageProps} />} />
+        <ToastContainer />
       </Provider>
     </>
   );

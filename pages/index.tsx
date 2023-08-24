@@ -19,7 +19,7 @@ export const getServerSideProps = reduxWrapper.getServerSideProps(
   (store) => async (ctx: any) => {
     await Promise.all([
       store.dispatch(fetchAirports()),
-      store.dispatch(fetchFlights()),
+      store.dispatch(fetchFlights("fetchall")),
     ]);
     return {
       props: {},

@@ -26,5 +26,5 @@ export type IFlightsPayload = {
   to: string;
   startDate: string;
   endDate: string | undefined;
-  passenger: number;
+  passenger: number | string;
 };

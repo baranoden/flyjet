@@ -5,13 +5,14 @@ export default (req, res) => {
   if (Object.keys(req.query).length > 0) {
     const { from, to, passenger, startDate, endDate } = req.query;
     const daySubs = moment(startDate).subtract("days", 1);
+
     const filterFlight = flights.filter(
       (el) =>
         el.from.airportCode === from &&
         el.to.airportCode === to &&
         el.passenger >= passenger &&
         moment(el.date).isAfter(daySubs) &&
-        (endDate.length > 0
+        (endDate !== "all"
           ? moment(el.date).isBefore(endDate)
           : moment(el.date).isAfter(daySubs))
     );

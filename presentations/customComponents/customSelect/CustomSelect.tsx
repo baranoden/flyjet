@@ -4,7 +4,7 @@ import Select from "react-select";
 const CustomSelect = (props: any) => {
   return (
     <Select
-      className={`custom-selective`}
+      className={`custom-selective ${props.className}`}
       classNamePrefix={"selective"}
       options={props.options}
       placeholder={props.placeholder}

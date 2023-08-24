@@ -7,6 +7,7 @@ const CustomDate = (props: any) => {
       selected={props.selected}
       onChange={props.onChange}
       placeholderText={props.placeholder}
+      className={props.className}
     />
   );
 };

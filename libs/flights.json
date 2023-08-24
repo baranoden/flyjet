@@ -24,6 +24,30 @@
     "passenger": 1
   },
   {
+    "flightNumber": "XYZ123",
+    "from": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "seat": "15A",
+    "class": "Economy",
+    "terminal": "T2",
+    "gate": "B12",
+    "boardingTime": "08:00",
+    "departureTime": "09:00",
+    "duration": "7 hours",
+    "arrivalTime": "04:00",
+    "date": "08-25-2023",
+    "baggage": "20kg",
+    "passenger": 1
+  },
+  {
     "flightNumber": "ABC456",
     "from": {
       "airportCode": "LAX",
