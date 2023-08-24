@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/common.scss";
 import "../styles/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,7 +14,7 @@ function MyApp({ Component, ...rest }) {
     <>
       <Head>
         <>
-          <title>Test</title>
+          <title>Flyjet - Amadeus</title>
           <meta name="description" content="-" />
           <meta name="keywords" content="-" />
           <meta name="author" content="-" />

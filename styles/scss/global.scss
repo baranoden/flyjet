@@ -58,7 +58,6 @@
 .boarding-pass {
   width: 350px;
   height: 382px;
-  background: #fff;
   border-radius: 12px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -76,9 +75,6 @@
     display: block;
   }
 
-  /*--------------------
-  Header
-  --------------------*/
   & header {
     background: linear-gradient(to bottom, #36475f, #2c394f);
     padding: 12px 20px;
@@ -107,9 +103,6 @@
     }
   }
 
-  /*--------------------
-  Cities
-  --------------------*/
   .cities {
     position: relative;
 
@@ -162,9 +155,6 @@
     }
   }
 
-  /*--------------------
-  Infos
-  --------------------*/
   .infos {
     display: flex;
     border-top: 1px solid #99d298;
@@ -212,9 +202,6 @@
     }
   }
 
-  /*--------------------
-  Strap
-  --------------------*/
   .strap {
     clear: both;
     position: relative;
@@ -255,4 +242,20 @@
       height: 80px;
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

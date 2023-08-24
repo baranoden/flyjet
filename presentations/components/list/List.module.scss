@@ -11,3 +11,9 @@
   overflow-x: scroll;
   white-space: nowrap;
 }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}

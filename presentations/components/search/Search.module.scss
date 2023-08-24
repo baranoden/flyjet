@@ -5,11 +5,11 @@
   width: 70%;
   border-radius: 8px;
   margin: -10rem auto;
-  padding: 1rem;
+  padding: 0.5rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: auto;
+  height: 250px;
 }
 .formInputs {
   display: flex;
@@ -24,7 +24,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
   height: 45px;
   flex-wrap: wrap;
   label {
@@ -41,6 +40,12 @@
   span {
     font-size: 25px;
   }
+  button {
+    cursor: pointer;
+    background: #44a4f3;
+    color: white;
+    font-size: 15px;
+  }
 }
 .incrementers {
   background: #fff;
@@ -51,15 +56,28 @@
   width: 30px;
   text-align: center;
   padding: 0;
-  cursor: pointer !important;
-  &:hover {
-    cursor: pointer !important;
-  }
 }
 .searchBtn {
   width: 30%;
   background: #44a4f3;
-  &:hover {
-    background-color: orange;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 90%;
   }
 }
