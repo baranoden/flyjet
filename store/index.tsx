@@ -5,18 +5,18 @@ import {
   configureStore,
 } from "@reduxjs/toolkit";
 import { ThunkAction } from "redux-thunk";
-import flightReducer from "./slices/flight";
+import airportsReducer from "./slices/airports";
 import { HYDRATE, createWrapper } from "next-redux-wrapper";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 const combinedReducer = combineReducers({
-  flight: flightReducer,
+  airports: airportsReducer,
 });
 const reducer = (
   state: ReturnType<typeof combinedReducer>,
   action: AnyAction
 ) => {
   if (action.type === HYDRATE) {
-    const reducers = ["flight"];
+    const reducers = ["airports"];
     let nextState = {
       ...state,
     };

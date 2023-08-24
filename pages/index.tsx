@@ -3,20 +3,13 @@ import List from "presentations/components/list";
 import NavBar from "presentations/components/navBar";
 import Search from "presentations/components/search";
 import { reduxWrapper, useAppSelector } from "store";
-import { fetchAirports } from "store/slices/flight";
+import { fetchAirports, fetchFlights } from "store/slices/airports";
 export default function Home() {
-  const airports = useAppSelector((state) => state.flight);
+  const airports = useAppSelector((state) => state.airports);
   return (
     <>
       <NavBar />
-      <Search
-        options={
-          airports.airports.map((index: any, key: Number) => ({
-            id: index,
-            label: index.city + "/" + index.code,
-          })) as any
-        }
-      />
+      <Search />
       <List />
     </>
   );
@@ -24,7 +17,10 @@ export default function Home() {
 
 export const getServerSideProps = reduxWrapper.getServerSideProps(
   (store) => async (ctx: any) => {
-    await store.dispatch(fetchAirports());
+    await Promise.all([
+      store.dispatch(fetchAirports()),
+      store.dispatch(fetchFlights()),
+    ]);
     return {
       props: {},
     };

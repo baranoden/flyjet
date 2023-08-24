@@ -14,8 +14,17 @@ export type IFlightsSlice = {
 };
 export type IAirportsSlice = {
   airports: any[];
+  flights: any[];
   status: {
     fetchAirports: IStatus;
+    fetchFlights: IStatus;
   };
   error: string;
+};
+export type IFlightsPayload = {
+  from: string;
+  to: string;
+  startDate: string;
+  endDate: string | undefined;
+  passenger: number;
 };

@@ -1,36 +1,85 @@
 import React, { useState } from "react";
 import styles from "./Search.module.scss";
 import CustomSelect from "../../customComponents/customSelect/CustomSelect";
-import { IAirportsSlice } from "store/models/common";
-import { AiOutlineSwap } from "react-icons/ai";
-import { BsCalendar2Date } from "react-icons/bs";
 import CustomDate from "presentations/customComponents/customDate/CustomDate";
 import Button from "react-bootstrap/Button";
-import Check from "react-bootstrap/FormCheck";
+import { useAppDispatch, useAppSelector } from "store";
+import { useFormik } from "formik";
 
-type IProps = {
-  options: IAirportsSlice;
-};
-const Search = (props: IProps) => {
-  const [count, setCount] = useState<number>(0);
+import * as Yup from "yup";
+import { fetchFlights } from "store/slices/airports";
+import moment from "moment";
+
+const Search = () => {
+  const dispatch = useAppDispatch();
   const [oneWay, setOneWay] = useState<boolean>(true);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const airports = useAppSelector((state) => state.airports.airports);
+  const reforgeFlight = airports.map((item: any, key: Number) => ({
+    id: item.code,
+    name: item.city + "/" + item.code,
+  }));
+  const formik = useFormik({
+    initialValues: {
+      from: "",
+      to: "",
+      startDate: "",
+      endDate: "",
+      passenger: 0,
+    },
+    // validationSchema: Yup.object().shape({
+    //   from: Yup.string().required("This field is required"),
+    //   to: Yup.string().required("This field is required"),
+    //   startDate: Yup.string().required("This field is required"),
+    //   endDate: Yup.string().required("This field is required"),
+    //   passenger: Yup.string().required("This field is required"),
+    // }),
+    onSubmit: (values) => {
+      dispatch(
+        fetchFlights({
+          ...values,
+          startDate: moment(values.startDate).format("MM-DD-YYYY"),
+          endDate: values.endDate
+            ? moment(values.endDate).format("MM-DD-YYYY")
+            : "",
+        })
+      );
+    },
+  });
+
   return (
     <div className={styles.container}>
       <div className={styles.formInputs}>
-        <CustomSelect placeholder={"From..."} options={props.options} />
-        <CustomSelect placeholder={"To..."} options={props.options} />
-        <CustomDate
-          selected={startDate}
-          placeholder={"Departure..."}
-          onChange={(e) => setStartDate(e)}
+        <CustomSelect
+          placeholder={"From..."}
+          options={reforgeFlight}
+          value={reforgeFlight.find((el) => el.id === formik.values.from)}
+          onChange={(e) => {
+            console.log(e);
+            formik.setFieldValue("from", e.id);
+          }}
         />
-        {oneWay ? (
+        <CustomSelect
+          placeholder={"To..."}
+          options={reforgeFlight}
+          value={reforgeFlight.find((el) => el.id === formik.values.to)}
+          onChange={(e) => {
+            formik.setFieldValue("to", e.id);
+          }}
+        />
+        <CustomDate
+          selected={formik.values.startDate}
+          placeholder={"Departure..."}
+          onChange={(e) => {
+            formik.setFieldValue("startDate", e);
+          }}
+        />
+        {!oneWay ? (
           <CustomDate
-            selected={endDate}
-            onChange={(e) => setEndDate(e)}
+            selected={formik.values.endDate}
             placeholder={"Return..."}
+            onChange={(e) => {
+              formik.setFieldValue("endDate", e);
+            }}
           />
         ) : null}
       </div>
@@ -39,15 +88,25 @@ const Search = (props: IProps) => {
         <div className={styles.counter}>
           <Button
             className={styles.incrementers}
-            onClick={() => setCount(count + 1)}
+            onClick={() =>
+              formik.setFieldValue(
+                "passenger",
+                Number(formik.values.passenger) + 1
+              )
+            }
           >
             +
           </Button>
-          <span>{count}</span>
+          <span>{formik.values.passenger}</span>
           <Button
             className={styles.incrementers}
             onClick={() => {
-              count !== 0 ? setCount(count - 1) : null;
+              formik.values.passenger !== 0
+                ? formik.setFieldValue(
+                    "passenger",
+                    Number(formik.values.passenger) - 1
+                  )
+                : null;
             }}
           >
             -
@@ -60,10 +119,18 @@ const Search = (props: IProps) => {
             id="checkbox"
             checked={oneWay}
             className={styles.checkbox}
-            onClick={() => setOneWay(!oneWay)}
+            onClick={() => {
+              setOneWay(!oneWay);
+              formik.setFieldValue("endDate", "");
+            }}
           />
         </div>
-        <Button className={styles.searchBtn}>Search</Button>
+        <Button
+          className={styles.searchBtn}
+          onClick={() => formik.handleSubmit()}
+        >
+          Search
+        </Button>
       </div>
     </div>
   );
