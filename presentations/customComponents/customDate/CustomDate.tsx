@@ -8,6 +8,7 @@ const CustomDate = (props: any) => {
       onChange={props.onChange}
       placeholderText={props.placeholder}
       className={props.className}
+      minDate={new Date()}
     />
   );
 };

@@ -30,8 +30,16 @@ const Search = () => {
       from: Yup.string().required("From field is required"),
       to: Yup.string().required("To field is required"),
       startDate: Yup.string().required("Departure field is required"),
-      endDate: oneWay ? null : Yup.string().required("This field is required"),
-      passenger: Yup.number().required("This field is required"),
+      endDate: oneWay
+        ? ""
+        : (Yup.string().required("This field is required") as any),
+      passenger: Yup.number()
+        .required("This field is required")
+        .test(
+          "min-value",
+          "Value must be higher or equal to 1",
+          (value) => value >= 1
+        ),
     }),
     onSubmit: (values) => {
       const payload = {
@@ -58,8 +66,8 @@ const Search = () => {
           className={
             formik.errors.from && formik.touched.from ? "red-border" : null
           }
-          value={reforgeFlight.find((el) => el.id === formik.values.from)}
-          onChange={(e) => {
+          value={reforgeFlight.find((el: any) => el.id === formik.values.from)}
+          onChange={(e: any) => {
             console.log(e);
             formik.setFieldValue("from", e.id);
           }}
@@ -71,7 +79,7 @@ const Search = () => {
             formik.errors.to && formik.touched.to ? "red-border" : null
           }
           value={reforgeFlight.find((el) => el.id === formik.values.to)}
-          onChange={(e) => {
+          onChange={(e: any) => {
             formik.setFieldValue("to", e.id);
           }}
         />
@@ -83,7 +91,7 @@ const Search = () => {
               ? "red-border"
               : null
           }
-          onChange={(e) => {
+          onChange={(e: any) => {
             formik.setFieldValue("startDate", e);
           }}
         />
@@ -96,14 +104,23 @@ const Search = () => {
                 ? "red-border"
                 : null
             }
-            onChange={(e) => {
+            onChange={(e: any) => {
               formik.setFieldValue("endDate", e);
             }}
           />
         ) : null}
       </div>
       <div className={styles.guests}>
-        <label>Passengers</label>
+        <label
+          style={{
+            borderBottom:
+              formik.errors.passenger && formik.touched.passenger
+                ? "1px solid red"
+                : "none",
+          }}
+        >
+          Passengers
+        </label>
         <div className={styles.counter}>
           <Button
             className={styles.incrementers}
@@ -146,9 +163,9 @@ const Search = () => {
         </div>
         <Button
           className={styles.resetBtn}
-          onClick={() => dispatch(fetchFlights("fetchall"))}
+          onClick={() => dispatch(fetchFlights("fetchall" as any))}
         >
-          Reeset
+          Reset Filters
         </Button>
         <Button
           className={styles.searchBtn}

@@ -263,5 +263,245 @@
     "date": "09-02-2023",
     "baggage": "35kg",
     "passenger": 1
+  },
+  {
+    "flightNumber": "BA345",
+    "from": {
+      "airportCode": "LAX",
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "seat": "20B",
+    "class": "Business",
+    "terminal": "T4",
+    "gate": "C8",
+    "boardingTime": "13:30",
+    "departureTime": "14:30",
+    "duration": "5 hours",
+    "arrivalTime": "22:30",
+    "date": "08-31-2023",
+    "baggage": "30kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "EK721",
+    "from": {
+      "airportCode": "DXB",
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    "to": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "seat": "10F",
+    "class": "First Class",
+    "terminal": "T3",
+    "gate": "A6",
+    "boardingTime": "10:00",
+    "departureTime": "11:00",
+    "duration": "7 hours",
+    "arrivalTime": "16:00",
+    "date": "09-05-2023",
+    "baggage": "40kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "AF112",
+    "from": {
+      "airportCode": "CDG",
+      "city": "Paris",
+      "country": "France"
+    },
+    "to": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "seat": "12C",
+    "class": "Economy",
+    "terminal": "T1",
+    "gate": "D4",
+    "boardingTime": "09:45",
+    "departureTime": "10:45",
+    "duration": "8 hours",
+    "arrivalTime": "18:45",
+    "date": "09-10-2023",
+    "baggage": "25kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "QF789",
+    "from": {
+      "airportCode": "SYD",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "to": {
+      "airportCode": "LAX",
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "seat": "15A",
+    "class": "Economy",
+    "terminal": "T1",
+    "gate": "B7",
+    "boardingTime": "23:30",
+    "departureTime": "00:30",
+    "duration": "13 hours",
+    "arrivalTime": "06:30",
+    "date": "09-20-2023",
+    "baggage": "23kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "SQ234",
+    "from": {
+      "airportCode": "SIN",
+      "city": "Singapore",
+      "country": "Singapore"
+    },
+    "to": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "seat": "8D",
+    "class": "Premium Economy",
+    "terminal": "T2",
+    "gate": "E3",
+    "boardingTime": "16:15",
+    "departureTime": "17:15",
+    "duration": "18 hours",
+    "arrivalTime": "21:15",
+    "date": "10-05-2023",
+    "baggage": "32kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "LH456",
+    "from": {
+      "airportCode": "FRA",
+      "city": "Frankfurt",
+      "country": "Germany"
+    },
+    "to": {
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "USA"
+    },
+    "seat": "6E",
+    "class": "Economy",
+    "terminal": "T1",
+    "gate": "A10",
+    "boardingTime": "07:45",
+    "departureTime": "08:45",
+    "duration": "11 hours",
+    "arrivalTime": "12:45",
+    "date": "10-15-2023",
+    "baggage": "28kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "CX888",
+    "from": {
+      "airportCode": "HKG",
+      "city": "Hong Kong",
+      "country": "China"
+    },
+    "to": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "seat": "9A",
+    "class": "Business",
+    "terminal": "T3",
+    "gate": "F5",
+    "boardingTime": "03:00",
+    "departureTime": "04:00",
+    "duration": "12 hours",
+    "arrivalTime": "16:00",
+    "date": "10-25-2023",
+    "baggage": "35kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "TK789",
+    "from": {
+      "airportCode": "IST",
+      "city": "Istanbul",
+      "country": "Turkey"
+    },
+    "to": {
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "USA"
+    },
+    "seat": "7B",
+    "class": "Economy",
+    "terminal": "T2",
+    "gate": "D12",
+    "boardingTime": "11:30",
+    "departureTime": "12:30",
+    "duration": "11 hours",
+    "arrivalTime": "19:30",
+    "date": "11-05-2023",
+    "baggage": "27kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "UA456",
+    "from": {
+      "airportCode": "ORD",
+      "city": "Chicago",
+      "country": "USA"
+    },
+    "to": {
+      "airportCode": "LHR",
+      "city": "London",
+      "country": "UK"
+    },
+    "seat": "14C",
+    "class": "Economy",
+    "terminal": "T1",
+    "gate": "B9",
+    "boardingTime": "06:45",
+    "departureTime": "07:45",
+    "duration": "8 hours",
+    "arrivalTime": "15:45",
+    "date": "11-15-2023",
+    "baggage": "22kg",
+    "passenger": 1
+  },
+  {
+    "flightNumber": "SQ321",
+    "from": {
+      "airportCode": "SYD",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "to": {
+      "airportCode": "HND",
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "seat": "3F",
+    "class": "First Class",
+    "terminal": "T2",
+    "gate": "A4",
+    "boardingTime": "14:00",
+    "departureTime": "15:00",
+    "duration": "9 hours",
+    "arrivalTime": "22:00",
+    "date": "11-25-2023",
+    "baggage": "40kg",
+    "passenger": 1
   }
 ]
